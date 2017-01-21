@@ -66,7 +66,12 @@ app.get('/bad', (request,response) => {
    });
 });
 
-
+app.get('/projects', (request, response) =>{
+   response.render('projects.hbs', {
+       pageTitle: 'Projects Page',
+       message: 'This is the projects page'
+   }) 
+});
 app.listen(port, () => {
     console.log(`server is up on port ${port} ` + new Date().getHours() + `:` + new Date().getMinutes());
 });
